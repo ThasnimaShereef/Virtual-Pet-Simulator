@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Pet Display */
+  #pet-display {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .happy {
+    background-image: url('images/images.jpeg');
+    animation: petHappy 1s infinite;
+  }
+  
+  .sad {
+    background-image: url('images/sad.jpeg');
+    animation: petSad 1s infinite;
+  }
+  
+  .sleepy {
+    background-image: url('images/sleeping.jpg');
+    animation: petSleepy 1s infinite;
+  }
+  
+  /* Pet Animations */
+  @keyframes petHappy {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes petSad {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+  }
+  
+  @keyframes petSleepy {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Progress Bars */
+  progress {
+    width: 100%;
+    height: 20px;
+    appearance: none;
+  }
+  
+  progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: #4caf50;
+    border-radius: 5px;
+  }
+  
+  /* Buttons */
+  .controls button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .controls button:hover {
+    background-color: #45a049;
+  }
+  
